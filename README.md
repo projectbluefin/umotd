@@ -1,23 +1,18 @@
-# Umotd
+# uMotd
 
-*Umotd is a translatable and configurable MOTD made for your favorite Linux systems!*
+*uMotd is the translatable MOTD for Universal Blue!*
 
-**WIP** : Some features still need testing.
+**WIP** : Some features still need testing and strings need to be checked.
 
 **Contributions are welcome!** If you want to contribute, you're welcome to submit a pull request or open an issue - it's very much appreciated ❤️
 
 [Access the documentation](https://github.com/theMimolet/umotd/tree/main/docs)
 
-## Roadmap
-
-Here are features that are planned for the future:
-
-- Shows a warning if the installed system image is over a certain amount of time (e.g. one month - configurable)
-- Shows a warning if the installed system image is unverified (could be disabled via configuration)
-
-> Both are already done in Bazzite, so it's only a matter of porting them over to umotd.
-
 ## How to try
+
+<!-- ### Universal Blue system images
+
+If you're running Bluefin Testing, it's already included in the image itself ! -->
 
 ### Install it with Homebrew
 
@@ -26,11 +21,9 @@ If you have Homebrew installed on your system, you can install Umotd with the fo
 brew install themimolet/tap/umotd
 ```
 
-It's the recommended way to install Umotd on your system, as it will automatically update via Homebrew.
-
 ### Download it from the releases page
 
-You can download the latest release from the [releases page](https://github.com/theMimolet/umotd/releases).
+You can download the binaries from the [releases page](https://github.com/theMimolet/umotd/releases).
 
 You can then rename it to `umotd` and place it in your usual `/bin` folder.
 
@@ -59,6 +52,6 @@ Umotd supports the following commands:
 - `disable`: always disables the MOTD for the current user
 - `version`, `--version`, `-v`: displays the version of Umotd you're currently using
 
-- `tips-preset list`: lists all available tips presets
-- `tips-preset add <name>`: adds one or multiple new tips preset to the config file
-- `tips-preset remove <name>`: removes one or multiple tips preset from the config file
+- `tags list`: lists all available tags
+- `tags add <tag>`: adds one or multiple new tags to the config file
+- `tags remove <tag>`: removes one or multiple tags from the config file
