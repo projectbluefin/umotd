@@ -4,6 +4,16 @@ import (
 	"github.com/leonelquinteros/gotext"
 )
 
+func tagExists(tagToCheck string) bool {
+	tags := ListTags()
+	for _, tag := range tags {
+		if tagToCheck == tag {
+			return true
+		}
+	}
+	return false
+}
+
 func TagsCommands(args []string, l *gotext.Locale) {
 	if len(args) < 1 {
 		println(l.Get("No command specified."))
@@ -35,7 +45,9 @@ func AddTags(args []string, l *gotext.Locale) {
 		return
 	}
 	for _, arg := range args {
-		if err := AddTag(arg); err != nil {
+		if tagExists(arg) {
+			println(l.Get("Tag %s already exists", arg))
+		} else if err := AddTag(arg); err != nil {
 			println(l.Get("Failed to add tag: %s", arg))
 			println(l.Get("Error ~> %s", err.Error()))
 		}
@@ -48,7 +60,9 @@ func RemoveTags(args []string, l *gotext.Locale) {
 		return
 	}
 	for _, arg := range args {
-		if err := RemoveTag(arg); err != nil {
+		if !tagExists(arg) {
+			println(l.Get("Tag %s doesn't exist", arg))
+		} else if err := RemoveTag(arg); err != nil {
 			println(l.Get("Failed to remove tag: %s", arg))
 			println(l.Get("Error ~> %s", err.Error()))
 		}

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
-"PO-Revision-Date: 2026-07-02 20:43+0200\n"
+"PO-Revision-Date: 2026-07-03 12:00+0200\n"
 "Last-Translator: Mimolet <themimolet@proton.me>\n"
 "Language-Team: French <>\n"
 "Language: fr\n"
@@ -401,7 +401,7 @@ msgstr ""
 "Installez **tealdeer** avec `brew install tealdeer` pour avoir un aperçu de "
 "base de vos outils."
 
-#: internal/tags.go:20
+#: internal/tags.go:30
 msgid "Command not recognized. Try 'list', 'add', or 'remove'."
 msgstr "Commande non reconnue. Essayez 'list', 'add', ou 'remove'."
 
@@ -409,15 +409,15 @@ msgstr "Commande non reconnue. Essayez 'list', 'add', ou 'remove'."
 msgid "Don't forget to check the [release notes](%s)"
 msgstr "N'oubliez pas de consulter les [notes de version](%s)"
 
-#: internal/tags.go:40 internal/tags.go:53
+#: internal/tags.go:52 internal/tags.go:67
 msgid "Error ~> %s"
 msgstr "Erreur ~> %s"
 
-#: internal/tags.go:39
+#: internal/tags.go:51
 msgid "Failed to add tag: %s"
 msgstr "Échec de rajout du tag: %s"
 
-#: internal/tags.go:52
+#: internal/tags.go:66
 msgid "Failed to remove tag: %s"
 msgstr "Échec de suppression du tag: %s"
 
@@ -437,15 +437,15 @@ msgstr ""
 "Pour plus d'informations techniques, jetez un coup d'œil au [guide "
 "d'administrateur Bluefin](%s)"
 
-#: internal/tags.go:9
+#: internal/tags.go:19
 msgid "No command specified."
 msgstr "Aucune commande spécifiée."
 
-#: internal/tags.go:34
+#: internal/tags.go:44
 msgid "No tags to add."
 msgstr "Aucun tag à ajouter."
 
-#: internal/tags.go:47
+#: internal/tags.go:59
 msgid "No tags to remove."
 msgstr "Aucun tag à supprimer."
 
@@ -483,6 +483,14 @@ msgstr ""
 "Basculer d'un shell à l'autre en toute sécurité: changez votre shell dans "
 "les paramètres du terminal plutôt qu'à l'échelle du système — [En savoir "
 "plus](%s)"
+
+#: internal/tags.go:49
+msgid "Tag %s already exists"
+msgstr "Le tag %s existe déjà"
+
+#: internal/tags.go:64
+msgid "Tag %s doesn't exist"
+msgstr "Le tag %s n'existe pas"
 
 #: internal/messages.go:22
 msgid ""
