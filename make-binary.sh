@@ -2,8 +2,8 @@
 # Script to build umotd binary for Linux on x86_64 and arm64
 
 go build
-
-VERSION=$(./umotd --version)
+VERSION=$(./umotd version)
+rm ./umotd
 
 # x86_64
 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o umotd_"${VERSION}"_linux_amd64
