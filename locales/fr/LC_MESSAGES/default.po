@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
-"PO-Revision-Date: 2026-07-03 12:00+0200\n"
+"PO-Revision-Date: 2026-07-07 20:48+0200\n"
 "Last-Translator: Mimolet <themimolet@proton.me>\n"
 "Language-Team: French <>\n"
 "Language: fr\n"
@@ -401,29 +401,25 @@ msgstr ""
 "Installez **tealdeer** avec `brew install tealdeer` pour avoir un aperçu de "
 "base de vos outils."
 
-#: internal/tags.go:30
-msgid "Command not recognized. Try 'list', 'add', or 'remove'."
-msgstr "Commande non reconnue. Essayez 'list', 'add', ou 'remove'."
-
 #: internal/messages.go:112 internal/messages.go:69
 msgid "Don't forget to check the [release notes](%s)"
 msgstr "N'oubliez pas de consulter les [notes de version](%s)"
 
-#: internal/tags.go:52 internal/tags.go:67
+#: internal/tags.go:53 internal/tags.go:68
 msgid "Error ~> %s"
 msgstr "Erreur ~> %s"
 
-#: internal/tags.go:51
-msgid "Failed to add tag: %s"
-msgstr "Échec de rajout du tag: %s"
+#: internal/tags.go:52
+msgid "Failed to add tag %s."
+msgstr "Échec de l'ajout du tag %s."
 
-#: internal/tags.go:66
-msgid "Failed to remove tag: %s"
-msgstr "Échec de suppression du tag: %s"
+#: internal/tags.go:67
+msgid "Failed to remove tag %s."
+msgstr "Échec de la suppression du tag %s."
 
 #: main.go:41
-msgid "Invalid command"
-msgstr "Commande invalide"
+msgid "Invalid command."
+msgstr "Commande invalide."
 
 #: internal/messages.go:49
 msgid "Manage desktop extensions with the [Extension Manager](%s)"
@@ -437,15 +433,11 @@ msgstr ""
 "Pour plus d'informations techniques, jetez un coup d'œil au [guide "
 "d'administrateur Bluefin](%s)"
 
-#: internal/tags.go:19
-msgid "No command specified."
-msgstr "Aucune commande spécifiée."
-
-#: internal/tags.go:44
+#: internal/tags.go:45
 msgid "No tags to add."
 msgstr "Aucun tag à ajouter."
 
-#: internal/tags.go:59
+#: internal/tags.go:60
 msgid "No tags to remove."
 msgstr "Aucun tag à supprimer."
 
@@ -475,6 +467,10 @@ msgstr ""
 "custom de Proton. Nous recommandons Proton-GE pour les jeux Steam "
 "problématiques et Wine-GE pour les autres jeux non-Steam."
 
+#: internal/tags.go:30
+msgid "Subcommand for `tags` not recognized."
+msgstr "Sous-commande pour `tags` non reconnue."
+
 #: internal/messages.go:23
 msgid ""
 "Switch shells safely: change your shell in Terminal settings instead of "
@@ -484,19 +480,19 @@ msgstr ""
 "les paramètres du terminal plutôt qu'à l'échelle du système — [En savoir "
 "plus](%s)"
 
-#: internal/tags.go:49
-msgid "Tag %s already exists"
-msgstr "Le tag %s existe déjà"
+#: internal/tags.go:50
+msgid "Tag %s already exists."
+msgstr "Le tag %s existe déjà."
 
-#: internal/tags.go:64
-msgid "Tag %s doesn't exist"
-msgstr "Le tag %s n'existe pas"
+#: internal/tags.go:65
+msgid "Tag %s doesn't exist."
+msgstr "Le tag %s n'existe pas."
 
 #: internal/messages.go:22
 msgid ""
 "The **Bazaar** app store is made by **Kolunmi** — [Support their work](%s)"
 msgstr ""
-"La logithèque **Bazaar** est créé par **Kolunmi** — [Soutenir leur travail]"
+"La logithèque **Bazaar** est créé par **Kolunmi** — [Soutenir son travail]"
 "(%s)"
 
 #: internal/messages.go:115
@@ -505,7 +501,7 @@ msgid ""
 "their work](%s)"
 msgstr ""
 "L'extension **Gradia Capture** est crée par **Alexander Vanhee** — [Soutenir "
-"leur travail](%s)"
+"son travail](%s)"
 
 #: internal/messages.go:57
 msgid "The KDE mascot is a dragon named `Konqi`!"
@@ -523,7 +519,11 @@ msgstr ""
 #: internal/messages.go:70
 msgid "The wallpapers are made by **Chandeleer** — [Support their work](%s)"
 msgstr ""
-"Les fonds d'écran sont créés par **Chandeleer** — [Soutenir leur travail](%s)"
+"Les fonds d'écran sont créés par **Chandeleer** — [Soutenir son travail](%s)"
+
+#: internal/usage.go:6
+msgid "Usage:"
+msgstr "Utilisation :"
 
 #: internal/messages.go:113
 msgid ""
@@ -594,6 +594,15 @@ msgstr ""
 "󰓓 Le programme de mise à jour de Steam game mode met également à jour "
 "Bazzite, vos applications et vos conteneurs Distrobox. Les notes de mise à "
 "jour affichées proviennent du client Steam."
+
+#~ msgid "Wrong usage of the `tags` subcommand."
+#~ msgstr "Mauvaise utilisation de la sous-commande `tags`."
+
+#~ msgid "Command not recognized. Try 'list', 'add', or 'remove'."
+#~ msgstr "Commande non reconnue. Essayez 'list', 'add', ou 'remove'."
+
+#~ msgid "No command specified."
+#~ msgstr "Aucune commande spécifiée."
 
 #~ msgid "**VSCode powers your development!** — [Donate to VSCode](%s)"
 #~ msgstr "**VSCode !** N'hésitez pas à leur [faire un don](%s)"
