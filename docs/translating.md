@@ -1,4 +1,3 @@
-
 # How to translate
 
 ## Prerequisites
@@ -13,7 +12,7 @@ To translate and test Umotd, you'll need to have the following tools installed o
 
 You can simply run the translators.sh script to extract the translatable strings and update the translations files.
 
-```
+```sh
 ./translators.sh <language code>
 ```
 
