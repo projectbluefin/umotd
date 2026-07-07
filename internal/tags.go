@@ -16,7 +16,7 @@ func tagExists(tagToCheck string) bool {
 
 func TagsCommands(args []string, l *gotext.Locale) {
 	if len(args) < 1 {
-		println(l.Get("No command specified."))
+		Usage(l)
 		return
 	}
 	switch args[0] {
@@ -27,7 +27,8 @@ func TagsCommands(args []string, l *gotext.Locale) {
 	case "remove":
 		RemoveTags(args[1:], l)
 	default:
-		println(l.Get("Command not recognized. Try 'list', 'add', or 'remove'."))
+		println(l.Get("Subcommand for `tags` not recognized."))
+		Usage(l)
 		return
 	}
 }
@@ -46,9 +47,9 @@ func AddTags(args []string, l *gotext.Locale) {
 	}
 	for _, arg := range args {
 		if tagExists(arg) {
-			println(l.Get("Tag %s already exists", arg))
+			println(l.Get("Tag %s already exists.", arg))
 		} else if err := AddTag(arg); err != nil {
-			println(l.Get("Failed to add tag: %s", arg))
+			println(l.Get("Failed to add tag %s.", arg))
 			println(l.Get("Error ~> %s", err.Error()))
 		}
 	}
@@ -61,9 +62,9 @@ func RemoveTags(args []string, l *gotext.Locale) {
 	}
 	for _, arg := range args {
 		if !tagExists(arg) {
-			println(l.Get("Tag %s doesn't exist", arg))
+			println(l.Get("Tag %s doesn't exist.", arg))
 		} else if err := RemoveTag(arg); err != nil {
-			println(l.Get("Failed to remove tag: %s", arg))
+			println(l.Get("Failed to remove tag %s.", arg))
 			println(l.Get("Error ~> %s", err.Error()))
 		}
 	}

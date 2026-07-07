@@ -25,20 +25,21 @@ func main() {
 	// Handles command line arguments
 	if len(os.Args) > 1 {
 		switch os.Args[1] {
-
-		// Prints the version
-		case "--version", "-v", "version":
-			fmt.Println(VERSION)
-			return
-		// Returns the path to the current file
+		// Returns the path of the current config file
 		case "config-path":
 			fmt.Println(internal.GetPath())
 			return
+		// Redirects to tag related commands
 		case "tags":
 			internal.TagsCommands(os.Args[2:], l)
 			return
+		// Prints the version
+		case "version":
+			fmt.Println(VERSION)
+			return
 		default:
-			fmt.Println(l.Get("Invalid command"))
+			fmt.Println(l.Get("Invalid command."))
+			internal.Usage(l)
 			return
 		}
 	}
