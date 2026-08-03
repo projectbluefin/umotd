@@ -122,14 +122,14 @@ func GetRandomMessage(l *gotext.Locale, tags []string) string {
 
 	if slices.Contains(tags, "vscode") {
 		messages = append(messages, []string{
+			l.Get("**Container development is OS-agnostic** — your devcontainers work on Linux, macOS, and Windows."),
 			l.Get("**Develop with devcontainers** — use `devcontainer.json` files in your projects for isolated, reproducible environments! - Don't forget to activate the containers workflow with `ujust devmode` and [get started today !](%s)", "https://code.visualstudio.com/docs/devcontainers/tutorial"),
+			l.Get("Prefer `docker compose` for multi-container setups where a single devcontainer isn't enough."),
 		}...)
 	}
 
 	if slices.Contains(tags, "containers") {
 		messages = append(messages, []string{
-			l.Get("**Container development is OS-agnostic** — your devcontainers work on Linux, macOS, and Windows."),
-			l.Get("Prefer `docker compose` for multi-container setups where a single devcontainer isn't enough."),
 			l.Get("**%s is your gateway to Kubernetes** 󱃾 `kind create cluster` to [get started](%s)", GetOSName(), "https://kind.sigs.k8s.io/"),
 			l.Get("**%s is your gateway to Cloud Native** — find your flock at [landscape.cncf.io](%s)", GetOSName(), "https://l.cncf.io"),
 			l.Get("**%s separates the OS from your development environment** — take full advantage of the cloud-native workflow!", GetOSName()),
