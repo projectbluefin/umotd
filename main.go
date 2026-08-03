@@ -10,7 +10,7 @@ import (
 	"github.com/leonelquinteros/gotext"
 )
 
-const VERSION = "0.3"
+const version = "0.3.1"
 
 //go:embed all:locales
 var localesFS embed.FS
@@ -27,7 +27,7 @@ func main() {
 		switch os.Args[1] {
 		// Returns the path of the current config file
 		case "config-path":
-			fmt.Println(internal.GetPath())
+			fmt.Println(internal.TagsPath)
 			return
 		// Redirects to tag related commands
 		case "tags":
@@ -35,12 +35,12 @@ func main() {
 			return
 		// Prints the version
 		case "version":
-			fmt.Println(VERSION)
+			fmt.Println(version)
 			return
 		default:
-			fmt.Println(l.Get("Invalid command."))
+			fmt.Fprintln(os.Stderr, l.Get("Invalid command."))
 			internal.Usage(l)
-			return
+			os.Exit(1)
 		}
 	}
 

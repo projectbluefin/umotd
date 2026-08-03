@@ -1,11 +1,9 @@
 # How to add new messages
 
-(WIP)
-
 First of all, you can edit messages wherever you like, from Github directly or from your favorite code editor.
 You won't necessarily need go installed.
 
-Then, you'll need to open `/internal/messages` - that's where the magic happens.
+Then, you'll need to open `/internal/messages.go` - that's where the magic happens.
 There will be a lot, but you don't need to understand everything.
 
 Here what you need to know.

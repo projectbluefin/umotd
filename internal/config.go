@@ -5,6 +5,8 @@ import (
 	"os"
 )
 
+var TagsPath = "/etc/ublue-os/tags.json"
+
 type Config struct {
 	Tags []string `json:"tags"`
 }
@@ -16,7 +18,7 @@ func AddTag(newTag string) error {
 	if err != nil {
 		return err
 	}
-	return os.WriteFile(GetPath(), data, 0644)
+	return os.WriteFile(TagsPath, data, 0644)
 }
 
 func RemoveTag(tagToRemove string) error {
@@ -31,7 +33,7 @@ func RemoveTag(tagToRemove string) error {
 	if err != nil {
 		return err
 	}
-	return os.WriteFile(GetPath(), data, 0644)
+	return os.WriteFile(TagsPath, data, 0644)
 }
 
 func ListTags() []string {
@@ -41,16 +43,11 @@ func ListTags() []string {
 	return nil
 }
 
-func GetPath() string {
-	return "/etc/ublue-os/tags.json"
-}
-
 // GetConfig returns the config file at the given path, or a default config if no valid config file is found
 func GetConfig() Config {
 	cfg := Config{}
-	path := GetPath()
 
-	data, err := os.ReadFile(path)
+	data, err := os.ReadFile(TagsPath)
 	if err != nil {
 		return cfg
 	}

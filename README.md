@@ -4,11 +4,11 @@
 
 ⚠️ **WIP** : Some features still need testing and strings need to be checked. ⚠️
 
-**Contributions are welcome!** If you want to contribute, you're welcome to submit a pull request or [open an issue](https://github.com/theMimolet/umotd/issues) - it's very much appreciated ❤️
+**Contributions are welcome!** If you want to contribute, you're welcome to submit a pull request or [open an issue](https://github.com/projectbluefin/umotd/issues) - it's very much appreciated ❤️
 
-Want to configure or contribute to uMotd ? Take a look at the [documentation](https://github.com/theMimolet/umotd/tree/main/docs) !
+Want to configure or contribute to uMotd ? Take a look at the [documentation](https://github.com/projectbluefin/umotd/tree/main/docs) !
 
-> Interessed in the CLI Banner instead ? Check [uwelcome](https://github.com/theMimolet/uwelcome/)
+> Interessed in the configurable CLI Banner instead ? Check [uwelcome](https://github.com/projectbluefin/uwelcome/)
 
 ## How to try
 
@@ -18,7 +18,7 @@ If you're running Bluefin Testing, it's already included in the image itself ! -
 
 ### Download it from the releases page
 
-You can download the binaries from the [releases page](https://github.com/theMimolet/umotd/releases).
+You can download the binaries from the [releases page](https://github.com/projectbluefin/umotd/releases).
 
 You can then rename it to `umotd` and place it in your usual `/bin` folder.
 
@@ -31,7 +31,7 @@ You'll need to have [`go`](https://repology.org/project/go/versions) installed o
 Then you'll have to simply clone the repository and then build the binary:
 
 ```sh
-git clone https://github.com/theMimolet/umotd
+git clone https://github.com/projectbluefin/umotd
 cd umotd
 go build
 ./umotd
@@ -52,3 +52,11 @@ tags list            # For listing all of your tags
 
 version # Prints the version of uMotd currently in use
 ```
+
+Learn more in the [docs folder](https://github.com/projectbluefin/umotd/tree/main/docs) !
+
+## AI usage
+
+This project had mild AI involvement mainly for auto-completion and code checking.
+
+[![REAL AI Rating - Level 3 "Moderate AI"](docs/ai-rating.png)](https://www.realgoodai.org/real-rating)
