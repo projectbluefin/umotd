@@ -1,6 +1,6 @@
 module umotd
 
-go 1.27.0
+go 1.27.1
 
 require (
 	github.com/leonelquinteros/gotext v1.7.2
