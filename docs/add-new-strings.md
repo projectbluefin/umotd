@@ -10,14 +10,14 @@ Here what you need to know.
 
 ## Messages
 
-A translatable message looks like like this : 
+A translatable message looks like like this :
 
 ```go
 l.Get(" **Want to install Decky Loader?** There's a `ujust` command for that! `ujust setup-decky install`"),
 ```
 
 Between the `(" ")` is our message we want to show and translate.
-`l.Get` is the command used by go to get the translation of our message. 
+`l.Get` is the command used by go to get the translation of our message.
 
 It's also possible to "inject" infos into it :
 
@@ -30,15 +30,17 @@ Here the first `%s` adds the OS Name and the second `%s` adds the link.
 
 ## Tags
 
-The tags are defined simply by if statements, like this : 
+The tags are defined simply by `if` statements, like this :
+
 ```go
 if slices.Contains(tags, "gnome") {
 }
 ```
 
-For this example, it's simply checking if there is "gnome" in the defined tags of the configuration.  
+For this example, it's checking if there is "gnome" in the defined tags of the configuration.
 
 It then appends the strings related to the tag
-```
+
+```go
 messages = append(messages, []string{}[...])
 ```
