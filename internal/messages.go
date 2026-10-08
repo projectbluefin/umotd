@@ -14,22 +14,17 @@ func GetRandomMessage(l *gotext.Locale, tags []string) string {
 	// General messages accross all Universal Blue systems
 
 	messages = append(messages, []string{
-		l.Get("Press `Ctrl + Alt + T` to quickly open a terminal."),
+		l.Get("Press `Ctrl + Alt + Enter` to quickly open a terminal."),
 		l.Get("**Did an update break something?** Roll back with `bootc rollback`."),
 		l.Get("Search for and install packages with `brew search` and `brew install`. %s will handle the updates automatically.", GetOSName()),
 		l.Get("Use `ujust --choose` to see all ujust shortcuts and their associated scripts."),
 		l.Get("The **Bazaar** app store is created by **Kolunmi** — [Support their work](%s)", "https://ko-fi.com/kolunmi"),
-		l.Get("Switch shells safely: Change your shell in your Terminal's settings (not system-wide) — [Read more](%s)", "https://tim.siosm.fr/blog/2023/12/22/dont-change-defaut-login-shell/"),
-		l.Get("Export Distrobox packages to make them appear like native applications — [View documentation](%s)", "https://distrobox.it/usage/distrobox-export/"),
-		l.Get("**H.264 hardware acceleration works out of the box** — no tweaks needed!"),
-		l.Get("**No Flatpak available?** Use Gear Lever for easy AppImage management — [Check it out](%s)", "appstream://it.mijorus.gearlever"),
 		l.Get("**Tailscale is included** — check out [the docs](%s)", "https://tailscale.com/docs/how-to/quickstart"),
-		l.Get("**Need to manage Flatpak repositories and data?** — Try [Warehouse](%s)", "appstream://io.github.flattool.Warehouse"),
 		l.Get("Use Clapgrep for **powerful folder searches** — [Check it out](%s)", "appstream://de.leopoldluley.Clapgrep"),
-		l.Get("**Love our wallpapers?** Explore the full [Universal Blue artwork collection](%s)", "https://docs.projectbluefin.io/artwork/"),
+		l.Get("**Love our wallpapers?** Explore the full [Bluefin artwork collection](%s)", "https://docs.projectbluefin.io/artwork/"),
 		l.Get("Run `sl` makes a Steam locomotive appear in your terminal! Install it with `brew install sl`"), // idea from bigredsponge
 		l.Get("**Are you a developer?** — Try `Developer Mode` for container tooling, virtualization, and IDEs — run `ujust devmode`"),
-		l.Get("**Like servers?** Check out [ucore](%s)", "https://github.com/ublue-os/ucore"),
+		l.Get("**Like servers?** Check out [Bluefin Server](%s)", "https://github.com/projectbluefin/server"),
 		l.Get("Use `ujust bbrew` to try **BBrew**, a simplified Homebrew package manager."),
 		l.Get("Install out **tealdeer** (`brew install tealdeer`) for a quick rundown of command-line tools."),
 		// l.Get("`cowsay <something>` makes a cow say something right in your terminal! Install it with `brew install cowsay`"), - homebrew cowsay requires to have perl installed.. but it's not automatically installed with cowsay as a dependency
@@ -43,11 +38,6 @@ func GetRandomMessage(l *gotext.Locale, tags []string) string {
 		messages = append(messages, []string{
 			l.Get("**GNOME powers your desktop** — [Donate to GNOME](%s)", "https://donate.gnome.org"),
 			l.Get("**Control your device from your phone** with the `GSConnect` extension. Look for it in the [Extension Manager](%s)", "appstream://com.mattjakeman.ExtensionManager"),
-			l.Get("**Miss the wobbly windows from the early 2000s?** Look for the `Compiz windows effect` extension in the [Extension Manager](%s)", "appstream://com.mattjakeman.ExtensionManager"),
-			l.Get("Do you like **the blur**? The `Blur my Shell` extension is pre-installed ! Configure it to your liking in the [Extension Manager](%s)", "appstream://com.mattjakeman.ExtensionManager"),
-			l.Get("**Want to see Bluetooth device battery levels?** Look for the `Bluetooth Battery Meter` extension in the [Extension Manager](%s)", "appstream://com.mattjakeman.ExtensionManager"),
-			l.Get("Manage desktop extensions using the [Extension Manager](%s)", "appstream://com.mattjakeman.ExtensionManager"),
-			l.Get("**Need more control over Flatpak app permissions?** Tweak them to your liking with [Flatseal](%s)", "appstream://com.github.tchx84.Flatseal"),
 		}...)
 	}
 
