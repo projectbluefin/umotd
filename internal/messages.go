@@ -137,7 +137,7 @@ func GetRandomMessage(tags []string, l *gotext.Locale) string {
 
 	// Dev related messages
 
-	if slices.Contains(tags, "shell") {
+	if slices.Contains(tags, "dev") {
 		messages = append(messages, []string{
 			l.Get("Switch shells safely: Change your shell in your Terminal's settings (not system-wide) — [Read more](%s)", "https://tim.siosm.fr/blog/2023/12/22/dont-change-defaut-login-shell/"),
 		}...)
