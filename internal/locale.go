@@ -1,7 +1,6 @@
 package internal
 
 import (
-	"embed"
 	"os"
 	"strings"
 
@@ -9,8 +8,8 @@ import (
 )
 
 // DetectLocale detects the current language
-func DetectLocale(localesFS embed.FS) string {
-	entries, err := localesFS.ReadDir("locales")
+func DetectLocale() string {
+	entries, err := os.ReadDir("locales")
 	if err != nil {
 		return "en"
 	}

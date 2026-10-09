@@ -5,56 +5,59 @@ import (
 	"os"
 )
 
-var TagsPath = "/etc/ublue-os/tags.json"
+const TagsPath = "/etc/ublue-os/tags.json"
+
+var Cfg = getConfig()
 
 type Config struct {
 	Tags []string `json:"tags"`
 }
 
+// AddTag adds the selected tag(s) to the config
 func AddTag(newTag string) error {
-	cfg := GetConfig()
-	cfg.Tags = append(cfg.Tags, newTag)
-	data, err := json.MarshalIndent(cfg, "", "  ")
+	Cfg.Tags = append(Cfg.Tags, newTag)
+	data, err := json.MarshalIndent(Cfg, "", "  ")
 	if err != nil {
 		return err
 	}
 	return os.WriteFile(TagsPath, data, 0644)
 }
 
+// RemoveTag removes the selected tag(s) from the config
 func RemoveTag(tagToRemove string) error {
-	cfg := GetConfig()
-	for i, tag := range cfg.Tags {
+	for i, tag := range Cfg.Tags {
 		if tag == tagToRemove {
-			cfg.Tags = append(cfg.Tags[:i], cfg.Tags[i+1:]...)
+			Cfg.Tags = append(Cfg.Tags[:i], Cfg.Tags[i+1:]...)
 			break
 		}
 	}
-	data, err := json.MarshalIndent(cfg, "", "  ")
+	data, err := json.MarshalIndent(Cfg, "", "  ")
 	if err != nil {
 		return err
 	}
 	return os.WriteFile(TagsPath, data, 0644)
 }
 
+// ListTags lists all the tags of the config
 func ListTags() []string {
-	if cfg := GetConfig(); cfg.Tags != nil {
-		return cfg.Tags
+	if Cfg.Tags != nil {
+		return Cfg.Tags
 	}
 	return nil
 }
 
-// GetConfig returns the config file at the given path, or a default config if no valid config file is found
-func GetConfig() Config {
-	cfg := Config{}
+// getConfig returns the current configuration
+func getConfig() Config {
+	config := Config{}
 
 	data, err := os.ReadFile(TagsPath)
 	if err != nil {
-		return cfg
+		return config
 	}
 
-	if err := json.Unmarshal(data, &cfg); err != nil {
-		return cfg
+	if err := json.Unmarshal(data, &config); err != nil {
+		return config
 	}
 
-	return cfg
+	return config
 }

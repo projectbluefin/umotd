@@ -5,7 +5,9 @@ import (
 	"regexp"
 )
 
-func GetOSName() string {
+var OSName = getOSName()
+
+func getOSName() string {
 	// Gets the OS name from /etc/os-release
 	data, err := os.ReadFile("/etc/os-release")
 	if err != nil {
