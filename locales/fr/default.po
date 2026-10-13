@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: umotd 0.3.3\n"
 "Report-Msgid-Bugs-To: themimolet@proton.me\n"
-"POT-Creation-Date: 2026-10-09 17:43+0200\n"
-"PO-Revision-Date: 2026-10-09 17:44+0200\n"
+"POT-Creation-Date: 2026-10-13 22:19+0200\n"
+"PO-Revision-Date: 2026-10-13 22:22+0200\n"
 "Last-Translator: Mimolet <themimolet@proton.me>\n"
 "Language-Team: French <international-french@discourse.gnome.org>\n"
 "Language: fr\n"
@@ -34,7 +34,7 @@ msgid ""
 "Search for and install packages with `brew search` and `brew install`. %s "
 "will handle the updates automatically."
 msgstr ""
-"Cherchez et installez des paquets avec `brew search` et `brew install`.%s "
+"Cherchez et installez des paquets avec `brew search` et `brew install`. %s "
 "s'occupera de leurs mises à jour automatiquement."
 
 #: internal/messages.go:20
@@ -224,7 +224,7 @@ msgid "The wallpapers are made by **Chandeleer** — [Support their work](%s)"
 msgstr ""
 "Les fonds d'écran sont créés par **Chandeleer** — [Soutenir son travail](%s)"
 
-#: internal/messages.go:68 internal/messages.go:113
+#: internal/messages.go:68 internal/messages.go:116
 #, go-format
 msgid ""
 "Use `ujust rebase-helper` to roll back or switch channels — [See the docs]"
@@ -240,7 +240,7 @@ msgstr ""
 "**Aimez-vous les dinosaures?** Essayez `ujust toggle-dinosaurs` pour une "
 "surprise mésozoïque !"
 
-#: internal/messages.go:70 internal/messages.go:119
+#: internal/messages.go:70 internal/messages.go:122
 #, go-format
 msgid ""
 "Are you a developer? Try the `Developer Experience` — [Check it out](%s)"
@@ -407,12 +407,12 @@ msgstr ""
 "Recherchez l'extension `Compiz windows effect` dans le [Gestionnaire "
 "d'extensions](%s)"
 
-#: internal/messages.go:102
+#: internal/messages.go:104
 msgid "**Want to install Decky Loader?** Use `ujust setup-decky install`"
 msgstr ""
 "**Envie d'installer Decky Loader ?** Utilisz `ujust setup-decky install`"
 
-#: internal/messages.go:103
+#: internal/messages.go:105
 msgid ""
 "󰓓 The Steam game mode updater also updates Bazzite, Flatpak apps, and "
 "Distrobox containers. The changelog is from the Steam client."
@@ -421,7 +421,7 @@ msgstr ""
 "Bazzite, vos applications et vos conteneurs Distrobox. Les notes de mise à "
 "jour proviennent du client Steam."
 
-#: internal/messages.go:104
+#: internal/messages.go:106
 msgid ""
 "**Install a game with Lutris?** Right-click on it and `Create Steam "
 "Shortcut` to play it in 󰓓 Steam game mode."
@@ -430,7 +430,7 @@ msgstr ""
 "votre jeu et cliquer sur `Create steam shortcut` pour le lancer depuis le 󰓓 "
 "Steam game mode."
 
-#: internal/messages.go:105
+#: internal/messages.go:107
 #, go-format
 msgid ""
 "**Missing game icons?** Use the `SteamGridDB` plugin for Decky Loader to add "
@@ -440,7 +440,7 @@ msgstr ""
 "pour ajouter des couvertures et des bannières pour vos jeux — [En savoir "
 "plus](%s)"
 
-#: internal/messages.go:106
+#: internal/messages.go:108
 #, go-format
 msgid ""
 "**Not sure which games are Linux-compatible?** The `ProtonDB Badges` plugin "
@@ -451,7 +451,7 @@ msgstr ""
 "Loader `ProtonDB Badges` rajoute des badges de compatibilité gérés par la "
 "communauté pour toute votre bibliothèque 󰓓 Steam — [En savoir plus](%s)"
 
-#: internal/messages.go:107
+#: internal/messages.go:109
 msgid ""
 "**Want more security?** Use **Tailscale** and **OpenVPN** (built-in) with "
 "the `Tailscale Control` and `TunnelDeck` Decky Loader plugins in 󰓓 Steam "
@@ -461,7 +461,7 @@ msgstr ""
 "(intégrés) grâce aux plugins Decky Loader `Tailscale Control` et "
 "`TunnelDeck` depuis le 󰓓 Steam game mode."
 
-#: internal/messages.go:108
+#: internal/messages.go:110
 #, go-format
 msgid ""
 "**Using a handheld with limited buttons?** 󰓓 Steam game mode supports touch "
@@ -471,13 +471,13 @@ msgstr ""
 "Steam game mode prend en charge les gestes tactiles pour faire glisser les "
 "menus, grâce à [ChimeraOS](%s)"
 
-#: internal/messages.go:114
+#: internal/messages.go:117
 #, go-format
 msgid "**Love Bluefin?** Help keep it going by [donating](%s)"
 msgstr ""
 "**Vous aimez Bluefin ?** Aidez-nous à continuer en [faisant un don](%s)"
 
-#: internal/messages.go:115
+#: internal/messages.go:118
 #, go-format
 msgid ""
 "Need technical details? — Check out the [Bluefin Administrator's Guide](%s)"
@@ -485,7 +485,7 @@ msgstr ""
 "Pour plus d'informations techniques, jetez un coup d'œil au [guide "
 "d'administrateur Bluefin](%s)"
 
-#: internal/messages.go:116
+#: internal/messages.go:119
 #, go-format
 msgid ""
 "Use DistroShelf to run apps from other distros in isolated containers — no "
@@ -494,7 +494,7 @@ msgstr ""
 "Utilisez Distroshelf pour lancer des applis d'autres distributions dans des "
 "conteneurs isolés — aucun engagement n'est requis — [Aller voir](%s)"
 
-#: internal/messages.go:117
+#: internal/messages.go:120
 #, go-format
 msgid ""
 "The `Gradia Capture` extension helps you take better screenshots! Thank "
@@ -503,18 +503,18 @@ msgstr ""
 "L'extension **Gradia Capture** vous aide à prendre de meilleures captures "
 "d'écran ! Remerciez Alexander Vanhee en [soutenant son travail](%s)"
 
-#: internal/messages.go:118
+#: internal/messages.go:121
 #, go-format
 msgid "Most wallpapers are by **Jacob Schnurr** — [Check out his Etsy](%s)"
 msgstr ""
 "La plupart des fonds d'écran sont faits par **Jacob Schnurr** — [Voir sa "
 "page Etsy](%s)"
 
-#: internal/messages.go:125
+#: internal/messages.go:128
 msgid "Press `Ctrl + Alt + ENTER` to quickly open a terminal."
 msgstr "Appuyez sur `Ctrl + Alt + ENTRÉE` pour ouvrir un terminal rapidement."
 
-#: internal/messages.go:126
+#: internal/messages.go:129
 msgid ""
 "The **Control Center** helps you manage your updates, maintenance and helps "
 "you discover new tools!"
@@ -522,17 +522,7 @@ msgstr ""
 "Le **Control Center** vous aider à gérer vos mises-à-jour, votre maintenance "
 "et vous aide à découvrir de nouveaux outils ! "
 
-#: internal/messages.go:142
-#, go-format
-msgid ""
-"Switch shells safely: Change your shell in your Terminal's settings (not "
-"system-wide) — [Read more](%s)"
-msgstr ""
-"Changer de shell en toute sécurité  : changez votre shell dans les "
-"paramètres du terminal plutôt qu'à l'échelle du système — [En savoir plus]"
-"(%s)"
-
-#: internal/messages.go:148
+#: internal/messages.go:145
 msgid ""
 "**Container development is OS-agnostic** — devcontainers work on Linux, "
 "macOS, and Windows."
@@ -540,7 +530,7 @@ msgstr ""
 "**Le développement par conteneur est indépendant de votre système** — les "
 "devcontainers fonctionnent sur Linux, macOS et Windows.\""
 
-#: internal/messages.go:149
+#: internal/messages.go:146
 #, go-format
 msgid ""
 "**Develop with devcontainers** — use `devcontainer.json` to create isolated, "
@@ -551,7 +541,7 @@ msgstr ""
 "isolés et reproductibles qui marchent sur n'importe quel système ! - Activez "
 "le workflow avec `ujust devmode` et [démarrez dès aujourd'hui !](%s)"
 
-#: internal/messages.go:150
+#: internal/messages.go:147
 msgid ""
 "For multi-container setups, use `docker compose` instead of a single "
 "devcontainer."
@@ -559,7 +549,7 @@ msgstr ""
 "Pour les installations multi-conteneurs, utilisez un `docker compose` à la "
 "place d'un seul devcontainer."
 
-#: internal/messages.go:156
+#: internal/messages.go:153
 #, go-format
 msgid ""
 "**%s is your gateway to 󱃾 Kubernetes** — run `kind create cluster` to [get "
@@ -568,7 +558,7 @@ msgstr ""
 "**%s est votre porte d'entrée à 󱃾 Kubernetes** — entrez `kind create "
 "cluster` pour [commencer](%s)"
 
-#: internal/messages.go:157
+#: internal/messages.go:154
 #, go-format
 msgid ""
 "**%s is your gateway to Cloud Native** — find your flock at "
@@ -577,7 +567,7 @@ msgstr ""
 "**%s est votre porte d'entrée au Cloud Native** — trouvez votre vocation à "
 "[landscape.cncf.io](%s)"
 
-#: internal/messages.go:158
+#: internal/messages.go:155
 #, go-format
 msgid ""
 "%s separates the OS from your development environment — **embrace the cloud-"
@@ -586,50 +576,13 @@ msgstr ""
 "**%s sépare le système d'exploitation de votre environnement de "
 "développement** — prenez en mains le workflow cloud-native !"
 
-#: internal/messages.go:159
+#: internal/messages.go:156
 msgid ""
 "Use `ujust bbrew` and select `k8s-tools` to install Kubernetes tools like "
 "`kind` and `kubectl`."
 msgstr ""
 "Utilisez `ujust bbrew` et sélectionnez `k8s-tools` pour installer des outils "
 "Kubernetes comme `kind` et `kubectl`."
-
-#: internal/tags.go:30
-msgid "Subcommand for `tags` not recognized."
-msgstr "Sous-commande pour `tags` non reconnue."
-
-#: internal/tags.go:45
-msgid "No tags to add."
-msgstr "Aucun tag à ajouter."
-
-#: internal/tags.go:50
-#, go-format
-msgid "Tag %s already exists."
-msgstr "Le tag %s existe déjà."
-
-#: internal/tags.go:52
-#, go-format
-msgid "Failed to add tag %s."
-msgstr "Échec de l'ajout du tag %s."
-
-#: internal/tags.go:53 internal/tags.go:68
-#, go-format
-msgid "Error ~> %s"
-msgstr "Erreur ~> %s"
-
-#: internal/tags.go:60
-msgid "No tags to remove."
-msgstr "Aucun tag à supprimer."
-
-#: internal/tags.go:65
-#, go-format
-msgid "Tag %s doesn't exist."
-msgstr "Le tag %s n'existe pas."
-
-#: internal/tags.go:67
-#, go-format
-msgid "Failed to remove tag %s."
-msgstr "Échec de la suppression du tag %s."
 
 #: internal/usage.go:13
 msgid ""
@@ -642,6 +595,17 @@ msgstr ""
 msgid "Usage:"
 msgstr "Utilisation  :"
 
-#: main.go:41
+#: main.go:34
+#, go-format
+msgid ""
+"󰋼 The Live ISO is designed for installation and troubleshooting. `rpm-"
+"ostree` commands will not work here. If you've successfully installed %s, "
+"please restart your computer."
+msgstr ""
+"󰋼 Le Live ISO est conçu pour l'installation et le débogage. Les commandes "
+"`rpm-ostree` ne fonctionneront pas ici. Si vous venez de finir "
+"l'installation de %s, veuillez redémarrer votre ordinateur."
+
+#: main.go:37
 msgid "Invalid command."
 msgstr "Commande invalide."
