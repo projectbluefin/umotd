@@ -9,7 +9,7 @@ import (
 	"github.com/leonelquinteros/gotext"
 )
 
-const version = "0.3.3"
+const version = "0.3.3-dev-tagless"
 
 func main() {
 
@@ -21,14 +21,6 @@ func main() {
 	// Handles command line arguments
 	if len(os.Args) > 1 {
 		switch os.Args[1] {
-		// Returns the path of the current config file
-		case "config-path":
-			fmt.Println(i.TagsPath)
-			return
-		// Redirects to tag related commands
-		case "tags":
-			i.TagsCommands(os.Args[2:], l)
-			return
 		// Prints the version
 		case "version":
 			fmt.Println(version)
@@ -46,5 +38,5 @@ func main() {
 
 	// Loads the configuration from the system's config file
 
-	fmt.Print(i.GetRandomMessage(i.Cfg.Tags, l))
+	fmt.Print(i.GetRandomMessage(l))
 }
