@@ -9,7 +9,7 @@ import (
 	"github.com/leonelquinteros/gotext"
 )
 
-const version = "0.3.3-dev-tagless"
+const version = "0.4.0"
 
 func main() {
 
