@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: umotd 0.3.3\n"
+"Project-Id-Version: umotd 0.4.0\n"
 "Report-Msgid-Bugs-To: themimolet@proton.me\n"
-"POT-Creation-Date: 2026-10-09 17:43+0200\n"
+"POT-Creation-Date: 2026-10-13 21:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgstr ""
 #: internal/messages.go:19
 #, go-format
 msgid ""
-"Search for and install packages with `brew search` and `brew install`. %s "
+"Search for and install packages with `brew search` and `brew install`. %s "
 "will handle the updates automatically."
 msgstr ""
 
@@ -175,7 +175,7 @@ msgstr ""
 msgid "The wallpapers are made by **Chandeleer** — [Support their work](%s)"
 msgstr ""
 
-#: internal/messages.go:68 internal/messages.go:113
+#: internal/messages.go:68 internal/messages.go:116
 #, go-format
 msgid ""
 "Use `ujust rebase-helper` to roll back or switch channels — [See the docs]"
@@ -187,7 +187,7 @@ msgid ""
 "**Like dinosaurs?** Try `ujust toggle-dinosaurs` for a Mesozoic surprise!"
 msgstr ""
 
-#: internal/messages.go:70 internal/messages.go:119
+#: internal/messages.go:70 internal/messages.go:122
 #, go-format
 msgid ""
 "Are you a developer? Try the `Developer Experience` — [Check it out](%s)"
@@ -313,30 +313,30 @@ msgid ""
 "windows effect` extension in the [Extension Manager](%s)"
 msgstr ""
 
-#: internal/messages.go:102
+#: internal/messages.go:104
 msgid "**Want to install Decky Loader?** Use `ujust setup-decky install`"
 msgstr ""
 
-#: internal/messages.go:103
+#: internal/messages.go:105
 msgid ""
 "󰓓 The Steam game mode updater also updates Bazzite, Flatpak apps, and "
 "Distrobox containers. The changelog is from the Steam client."
 msgstr ""
 
-#: internal/messages.go:104
+#: internal/messages.go:106
 msgid ""
 "**Install a game with Lutris?** Right-click on it and `Create Steam "
 "Shortcut` to play it in 󰓓 Steam game mode."
 msgstr ""
 
-#: internal/messages.go:105
+#: internal/messages.go:107
 #, go-format
 msgid ""
 "**Missing game icons?** Use the `SteamGridDB` plugin for Decky Loader to add "
 "missing art — [More info](%s)"
 msgstr ""
 
-#: internal/messages.go:106
+#: internal/messages.go:108
 #, go-format
 msgid ""
 "**Not sure which games are Linux-compatible?** The `ProtonDB Badges` plugin "
@@ -344,74 +344,67 @@ msgid ""
 "󰓓 Steam Library — [More info](%s)"
 msgstr ""
 
-#: internal/messages.go:107
+#: internal/messages.go:109
 msgid ""
 "**Want more security?** Use **Tailscale** and **OpenVPN** (built-in) with "
 "the `Tailscale Control` and `TunnelDeck` Decky Loader plugins in 󰓓 Steam "
 "game mode."
 msgstr ""
 
-#: internal/messages.go:108
+#: internal/messages.go:110
 #, go-format
 msgid ""
 "**Using a handheld with limited buttons?** 󰓓 Steam game mode supports touch "
 "gestures to slide out the menus, thanks to [ChimeraOS](%s)"
 msgstr ""
 
-#: internal/messages.go:114
+#: internal/messages.go:117
 #, go-format
 msgid "**Love Bluefin?** Help keep it going by [donating](%s)"
 msgstr ""
 
-#: internal/messages.go:115
+#: internal/messages.go:118
 #, go-format
 msgid ""
 "Need technical details? — Check out the [Bluefin Administrator's Guide](%s)"
 msgstr ""
 
-#: internal/messages.go:116
+#: internal/messages.go:119
 #, go-format
 msgid ""
 "Use DistroShelf to run apps from other distros in isolated containers — no "
 "commitment required — [Check it out](%s)"
 msgstr ""
 
-#: internal/messages.go:117
+#: internal/messages.go:120
 #, go-format
 msgid ""
 "The `Gradia Capture` extension helps you take better screenshots! Thank "
 "Alexander Vanhee — [Support his work!](%s)"
 msgstr ""
 
-#: internal/messages.go:118
+#: internal/messages.go:121
 #, go-format
 msgid "Most wallpapers are by **Jacob Schnurr** — [Check out his Etsy](%s)"
 msgstr ""
 
-#: internal/messages.go:125
+#: internal/messages.go:128
 msgid "Press `Ctrl + Alt + ENTER` to quickly open a terminal."
 msgstr ""
 
-#: internal/messages.go:126
+#: internal/messages.go:129
 msgid ""
 "The **Control Center** helps you manage your updates, maintenance and helps "
 "you discover new tools!"
 msgstr ""
 
-#: internal/messages.go:142
-#, go-format
-msgid ""
-"Switch shells safely: Change your shell in your Terminal's settings (not "
-"system-wide) — [Read more](%s)"
-msgstr ""
-
-#: internal/messages.go:148
+#: internal/messages.go:145
 msgid ""
 "**Container development is OS-agnostic** — devcontainers work on Linux, "
 "macOS, and Windows."
 msgstr ""
 
-#: internal/messages.go:149
+#: internal/messages.go:146
 #, go-format
 msgid ""
 "**Develop with devcontainers** — use `devcontainer.json` to create isolated, "
@@ -419,74 +412,37 @@ msgid ""
 "[get started today !](%s)"
 msgstr ""
 
-#: internal/messages.go:150
+#: internal/messages.go:147
 msgid ""
 "For multi-container setups, use `docker compose` instead of a single "
 "devcontainer."
 msgstr ""
 
-#: internal/messages.go:156
+#: internal/messages.go:153
 #, go-format
 msgid ""
 "**%s is your gateway to 󱃾 Kubernetes** — run `kind create cluster` to [get "
 "started](%s)"
 msgstr ""
 
-#: internal/messages.go:157
+#: internal/messages.go:154
 #, go-format
 msgid ""
 "**%s is your gateway to Cloud Native** — find your flock at "
 "[landscape.cncf.io](%s)"
 msgstr ""
 
-#: internal/messages.go:158
+#: internal/messages.go:155
 #, go-format
 msgid ""
 "%s separates the OS from your development environment — **embrace the cloud-"
 "native workflow**!"
 msgstr ""
 
-#: internal/messages.go:159
+#: internal/messages.go:156
 msgid ""
 "Use `ujust bbrew` and select `k8s-tools` to install Kubernetes tools like "
 "`kind` and `kubectl`."
-msgstr ""
-
-#: internal/tags.go:30
-msgid "Subcommand for `tags` not recognized."
-msgstr ""
-
-#: internal/tags.go:45
-msgid "No tags to add."
-msgstr ""
-
-#: internal/tags.go:50
-#, go-format
-msgid "Tag %s already exists."
-msgstr ""
-
-#: internal/tags.go:52
-#, go-format
-msgid "Failed to add tag %s."
-msgstr ""
-
-#: internal/tags.go:53 internal/tags.go:68
-#, go-format
-msgid "Error ~> %s"
-msgstr ""
-
-#: internal/tags.go:60
-msgid "No tags to remove."
-msgstr ""
-
-#: internal/tags.go:65
-#, go-format
-msgid "Tag %s doesn't exist."
-msgstr ""
-
-#: internal/tags.go:67
-#, go-format
-msgid "Failed to remove tag %s."
 msgstr ""
 
 #: internal/usage.go:13
@@ -498,6 +454,14 @@ msgstr ""
 msgid "Usage:"
 msgstr ""
 
-#: main.go:41
+#: main.go:34
+#, go-format
+msgid ""
+"󰋼 The Live ISO is designed for installation and troubleshooting. `rpm-"
+"ostree` commands will not work here. If you've successfully installed %s, "
+"please restart your computer."
+msgstr ""
+
+#: main.go:37
 msgid "Invalid command."
 msgstr ""

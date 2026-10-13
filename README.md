@@ -44,6 +44,7 @@ You'll then have the `umotd` binary in the current directory, which you can just
 uMotd supports the following subcommands:
 
 ```yml
+fb-iso:     Prints a specific message for Fedora-based isos
 help:       Shows the available commands
 version:    Displays the version of uMotd currently in use
 ```
