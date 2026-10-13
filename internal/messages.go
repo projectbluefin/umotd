@@ -16,7 +16,7 @@ func GetRandomMessage(l *gotext.Locale) string {
 	messages = append(messages, []string{
 		l.Get("Press `Ctrl + Alt + T` to quickly open a terminal."),
 		l.Get("**Did an update break something?** Roll back with `bootc rollback`."),
-		l.Get("Search for and install packages with `brew search` and `brew install`. %s will handle the updates automatically.", OSName),
+		l.Get("Search for and install packages with `brew search` and `brew install`. %s will handle the updates automatically.", OSName),
 		l.Get("Use `ujust --choose` to see all ujust shortcuts and their associated scripts."),
 		l.Get("The **Bazaar** app store is created by **Kolunmi** — [Support their work](%s)", "https://ko-fi.com/kolunmi"),
 		l.Get("**Tailscale is included in your system** — check out [the docs](%s)", "https://tailscale.com/docs/how-to/quickstart"),
