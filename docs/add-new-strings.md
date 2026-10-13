@@ -28,19 +28,25 @@ l.Get(" **%s is your gateway to Cloud Native** — find your flock at [landscape
 `%s` represents what we inject into it (a string for that matter) and they are handled in order.
 Here the first `%s` adds the OS Name and the second `%s` adds the link.
 
-## Tags
+## Conditions
 
-The tags are defined simply by `if` statements, like this :
+What is printed out depends on conditions - it will check different values accross the system and will print the strings related to what it finds.
+
+In practice, those are defined simply by `if` statements, like this one:
 
 ```go
-if slices.Contains(tags, "gnome") {
+if Desktop == "GNOME" {
+    ...
 }
 ```
 
-For this example, it's checking if there is "gnome" in the defined tags of the configuration.
-
-It then appends the strings related to the tag
+For the following example, it's checking if the current desktop is "KDE", then it appends the strings related to that desktop :
 
 ```go
-messages = append(messages, []string{}[...])
+if Desktop == "KDE" {
+    messages = append(messages, []string{
+        l.Get("Hi, if you see this, you use Kde!"),
+    }[...])
+}
+
 ```
