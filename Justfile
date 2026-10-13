@@ -2,20 +2,11 @@ package := "umotd"
 version := "0.3.3"
 
 # This returns the current version of umotd. It is used in the build command to set the version of the binary.
-version :
+version:
     @echo "Current version: {{version}}"
 
-# This builds the umotd binary for Linux on x86_64 and arm64 architectures.
-build :
-    @echo "Building {{package}}..."
-
-    GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o {{package}}_{{version}}_linux_amd64
-    GOOS=linux GOARCH=arm64 go build -ldflags="-s -w" -o {{package}}_{{version}}_linux_arm64
-
-    @echo "Built {{package}} v{{version}} for Linux on x86_64 and arm64"
-
 # This checks if the dependencies are on the user's system
-check-deps: check-deps-go check-deps-gettext
+check-deps:  check-deps-gettext
     @echo "All dependencies are installed ✅️"
 
 check-deps-go:
@@ -23,6 +14,15 @@ check-deps-go:
 
 check-deps-gettext:
     @which gettext >/dev/null 2>&1 || (echo "You don't have \`gettext\` installed :(" && exit 1)
+
+# This builds the umotd binary for Linux on x86_64 and arm64 architectures.
+build: check-deps-go
+    @echo "Building {{package}}..."
+
+    GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o {{package}}_{{version}}_linux_amd64
+    GOOS=linux GOARCH=arm64 go build -ldflags="-s -w" -o {{package}}_{{version}}_linux_arm64
+
+    @echo "Built {{package}} v{{version}} for Linux on x86_64 and arm64"
 
 # This extracts the strings from umotd and makes a potfile with them
 extract-translations: check-deps-gettext
@@ -43,7 +43,7 @@ extract-translations: check-deps-gettext
     echo "Translations extracted ✅️"
 
 # This generates the translation files for the specified language.
-translate lang: check-deps-go extract-translations
+translate lang: extract-translations
     #!/bin/bash
     # If the language already exists, update it
     if [ -f "locales/{{lang}}/default.po" ]; then \
