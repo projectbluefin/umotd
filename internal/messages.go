@@ -2,12 +2,12 @@ package internal
 
 import (
 	"math/rand"
-	"slices"
+	"strings"
 
 	"github.com/leonelquinteros/gotext"
 )
 
-func GetRandomMessage(tags []string, l *gotext.Locale) string {
+func GetRandomMessage(l *gotext.Locale) string {
 
 	messages := []string{}
 
@@ -16,7 +16,7 @@ func GetRandomMessage(tags []string, l *gotext.Locale) string {
 	messages = append(messages, []string{
 		l.Get("Press `Ctrl + Alt + T` to quickly open a terminal."),
 		l.Get("**Did an update break something?** Roll back with `bootc rollback`."),
-		l.Get("Search for and install packages with `brew search` and `brew install`. %s will handle the updates automatically.", OSName),
+		l.Get("Search for and install packages with `brew search` and `brew install`. %s will handle the updates automatically.", OSName),
 		l.Get("Use `ujust --choose` to see all ujust shortcuts and their associated scripts."),
 		l.Get("The **Bazaar** app store is created by **Kolunmi** — [Support their work](%s)", "https://ko-fi.com/kolunmi"),
 		l.Get("**Tailscale is included in your system** — check out [the docs](%s)", "https://tailscale.com/docs/how-to/quickstart"),
@@ -39,7 +39,7 @@ func GetRandomMessage(tags []string, l *gotext.Locale) string {
 
 	// Desktop related messages
 
-	if slices.Contains(tags, "gnome") {
+	if Desktop == "GNOME" {
 		messages = append(messages, []string{
 			l.Get("**GNOME powers your desktop** — [Donate to GNOME](%s)", "https://donate.gnome.org"),
 			l.Get("Manage desktop extensions using the [Extension Manager](%s)", "appstream://com.mattjakeman.ExtensionManager"),
@@ -49,7 +49,7 @@ func GetRandomMessage(tags []string, l *gotext.Locale) string {
 		}...)
 	}
 
-	if slices.Contains(tags, "kde") {
+	if Desktop == "KDE" {
 		messages = append(messages, []string{
 			l.Get("**KDE powers your desktop** — [Donate to KDE](%s)", "https://kde.org/donate"),
 			l.Get("KDE's mascot is a dragon named **Konqi**!"),
@@ -60,7 +60,7 @@ func GetRandomMessage(tags []string, l *gotext.Locale) string {
 
 	// System related messages
 
-	if slices.Contains(tags, "aurora") {
+	if OSName == "Aurora" {
 		messages = append(messages, []string{
 			l.Get("**Love Aurora?** Help keep it going by [donating](%s)", "https://docs.getaurora.dev/project-docs/credits"),
 			l.Get("**Need technical details?** Check out the [Aurora docs](%s)", "https://docs.getaurora.dev"),
@@ -71,7 +71,7 @@ func GetRandomMessage(tags []string, l *gotext.Locale) string {
 			l.Get("**%s is not a distro**, this is a custom image built on  Fedora Atomic Desktop technology — [View our mission](%s)", OSName, "https://ublue.it/mission/"),
 		}...)
 	}
-	if slices.Contains(tags, "bazzite") {
+	if OSName == "Bazzite" {
 		messages = append(messages, []string{
 			l.Get("**Love Bazzite?** Help keep it going by [donating](%s)", "https://docs.bazzite.gg/donations/"),
 			l.Get("**Did an update break something?** Roll back, pin the previous release, or rebase to an older build — [view the guide](%s)", "https://docs.bazzite.gg/Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/rolling_back_system_updates/"),
@@ -90,14 +90,16 @@ func GetRandomMessage(tags []string, l *gotext.Locale) string {
 			l.Get("**Support indie game preservation and OSS developers** — [Join Hit Save!'s Patreon](%s)", "https://patreon.com/hitsave"),
 			l.Get("Use `ujust changelogs` to view a summary of the package changes since the last update."),
 		}...)
+
+		if Desktop == "GNOME" {
+			messages = append(messages, []string{
+				l.Get("**Missing the hot corner?** Move your mouse to the edge at the bottom of your screen to trigger the Activities overview, or re-enable it in Settings."),
+				l.Get("**Miss the wobbly windows from the early 2000s?** Look for the `Compiz windows effect` extension in the [Extension Manager](%s)", "appstream://com.mattjakeman.ExtensionManager"),
+			}...)
+		}
 	}
-	if slices.Contains(tags, "bazzite-gnome") {
-		messages = append(messages, []string{
-			l.Get("**Missing the hot corner?** Move your mouse to the edge at the bottom of your screen to trigger the Activities overview, or re-enable it in Settings."),
-			l.Get("**Miss the wobbly windows from the early 2000s?** Look for the `Compiz windows effect` extension in the [Extension Manager](%s)", "appstream://com.mattjakeman.ExtensionManager"),
-		}...)
-	}
-	if slices.Contains(tags, "bazzite-deck") {
+
+	if strings.Contains(ImgName, "bazzite-deck") {
 		messages = append(messages, []string{
 			l.Get("**Want to install Decky Loader?** Use `ujust setup-decky install`"),
 			l.Get("󰓓 The Steam game mode updater also updates Bazzite, Flatpak apps, and Distrobox containers. The changelog is from the Steam client."),
@@ -108,7 +110,8 @@ func GetRandomMessage(tags []string, l *gotext.Locale) string {
 			l.Get("**Using a handheld with limited buttons?** 󰓓 Steam game mode supports touch gestures to slide out the menus, thanks to [ChimeraOS](%s)", "https://chimeraos.org/"),
 		}...)
 	}
-	if slices.Contains(tags, "bluefin") {
+
+	if OSName == "Bluefin" {
 		messages = append(messages, []string{
 			l.Get("Use `ujust rebase-helper` to roll back or switch channels — [See the docs](%s)", "https://docs.projectbluefin.io/administration/#switching-between-streams"),
 			l.Get("**Love Bluefin?** Help keep it going by [donating](%s)", "https://docs.projectbluefin.io/donations"),
@@ -120,7 +123,7 @@ func GetRandomMessage(tags []string, l *gotext.Locale) string {
 		}...)
 	}
 
-	if slices.Contains(tags, "bluefin-dakota") {
+	if strings.Contains(ImgName, "dakota") {
 		messages = append(messages, []string{
 			l.Get("Press `Ctrl + Alt + ENTER` to quickly open a terminal."),
 			l.Get("The **Control Center** helps you manage your updates, maintenance and helps you discover new tools!"),
@@ -128,22 +131,16 @@ func GetRandomMessage(tags []string, l *gotext.Locale) string {
 		}...)
 	}
 
-	if slices.Contains(tags, "bluefin-classic") {
-		messages = append(messages, []string{
-			// l.Get("**Bluefin Dakotaraptor** is the newest addition to the Bluefin family! — [Check it out](%s)", "https://docs.projectbluefin.io/dakota/"),
-			// l.Get("**Bluefin Dakotaraptor** builds your desktop directly from GNOME! — [Check it out](%s)", "https://docs.projectbluefin.io/dakota/"),
-		}...)
-	}
+	// if slices.Contains(tags, "bluefin-classic") {
+	// 	messages = append(messages, []string{
+	// 		// l.Get("**Bluefin Dakotaraptor** is the newest addition to the Bluefin family! — [Check it out](%s)", "https://docs.projectbluefin.io/dakota/"),
+	// 		// l.Get("**Bluefin Dakotaraptor** builds your desktop directly from GNOME! — [Check it out](%s)", "https://docs.projectbluefin.io/dakota/"),
+	// 	}...)
+	// }
 
 	// Dev related messages
 
-	if slices.Contains(tags, "dev") {
-		messages = append(messages, []string{
-			l.Get("Switch shells safely: Change your shell in your Terminal's settings (not system-wide) — [Read more](%s)", "https://tim.siosm.fr/blog/2023/12/22/dont-change-defaut-login-shell/"),
-		}...)
-	}
-
-	if slices.Contains(tags, "code") {
+	if HasSystemApp("code") || HasSystemApp("codium") {
 		messages = append(messages, []string{
 			l.Get("**Container development is OS-agnostic** — devcontainers work on Linux, macOS, and Windows."),
 			l.Get("**Develop with devcontainers** — use `devcontainer.json` to create isolated, reproducible environments! - Activate the workflow with `ujust devmode` and [get started today !](%s)", "https://code.visualstudio.com/docs/devcontainers/tutorial"),
@@ -151,7 +148,7 @@ func GetRandomMessage(tags []string, l *gotext.Locale) string {
 		}...)
 	}
 
-	if slices.Contains(tags, "containers") {
+	if HasSystemApp("docker") || HasSystemApp("podman") {
 		messages = append(messages, []string{
 			l.Get("**%s is your gateway to 󱃾 Kubernetes** — run `kind create cluster` to [get started](%s)", OSName, "https://kind.sigs.k8s.io/"),
 			l.Get("**%s is your gateway to Cloud Native** — find your flock at [landscape.cncf.io](%s)", OSName, "https://l.cncf.io"),

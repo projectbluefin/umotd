@@ -2,10 +2,8 @@
 
 ## Prerequisites
 
-To translate and test Umotd, you'll need to have the following tools installed on your system:
-
-- [`go`](https://repology.org/project/go/versions)
-- [`gettext`](https://repology.org/project/gettext/versions)
+To translate uMotd, you'll need to have [`gettext`](https://repology.org/project/gettext/versions) installed on your system.
+If you're on a Universal Blue system, it is already installed on your system.
 
 ## Usage
 
@@ -23,16 +21,23 @@ Your generated/updated translation file will be located in the `locales/<languag
 
 Finally, use your favorite po editor to translate the strings in the `.po` file - like [Poedit](https://flathub.org/en/apps/net.poedit.Poedit), [Gtranslator](https://flathub.org/en/apps/org.gnome.Gtranslator) or [Lokalize](https://flathub.org/en/apps/org.kde.lokalize).
 
+You can also use a simple text editor if you wish.
+
 ## Testing your translation
 
-You can then use `LANGUAGE=<language code>` in front of the usual command to test your translation, like this:
+To test umotd, you will need to have [`go`](https://repology.org/project/go/versions) installed.
+
+Then, to build the program, open the terminal in the project folder.
+After, you can run the project with the following:
 
 ```sh
-# Run with the compiled binary -> needs to be rebuilt after translation changes
-LANGUAGE=fr ./umotd
+go run .
 ```
 
+It will run in the language used by your system (or english if umotd doesn't have any translation yet).
+
+If you want to make sure the program run in a specific language, you can use `LANGUAGE=<language code>` in front of the usual command to test your translation, like this:
+
 ```sh
-# Run with the source code -> not compiled, so no need to rebuild after translation changes
 LANGUAGE=fr go run .
 ```

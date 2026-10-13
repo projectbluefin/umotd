@@ -12,9 +12,9 @@ Want to configure or contribute to uMotd ? Take a look at the [documentation](ht
 
 ## How to try
 
-<!-- ### Universal Blue system images
+### Universal Blue system images
 
-If you're running Bluefin Testing, it's already included in the image itself ! -->
+uMotd is currently featured in Bluefin Dakota!
 
 ### Download it from the releases page
 
@@ -43,14 +43,9 @@ You'll then have the `umotd` binary in the current directory, which you can just
 
 uMotd supports the following subcommands:
 
-```sh
-config-path # Prints the path of the config file
-
-tags add <tag>...    # For adding tags
-tags remove <tag>... # For removing tags
-tags list            # For listing all of your tags
-
-version # Prints the version of uMotd currently in use
+```yml
+help:       Shows the available commands
+version:    Displays the version of uMotd currently in use
 ```
 
 Learn more in the [docs folder](https://github.com/projectbluefin/umotd/tree/main/docs) !
