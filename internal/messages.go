@@ -60,7 +60,7 @@ func GetRandomMessage(l *gotext.Locale) string {
 
 	// System related messages
 
-	if OSName == "Aurora" {
+	if strings.Contains(OSName, "Aurora") {
 		messages = append(messages, []string{
 			l.Get("**Love Aurora?** Help keep it going by [donating](%s)", "https://docs.getaurora.dev/project-docs/credits"),
 			l.Get("**Need technical details?** Check out the [Aurora docs](%s)", "https://docs.getaurora.dev"),
@@ -71,7 +71,7 @@ func GetRandomMessage(l *gotext.Locale) string {
 			l.Get("**%s is not a distro**, this is a custom image built on  Fedora Atomic Desktop technology — [View our mission](%s)", OSName, "https://ublue.it/mission/"),
 		}...)
 	}
-	if OSName == "Bazzite" {
+	if strings.Contains(OSName, "Bazzite") {
 		messages = append(messages, []string{
 			l.Get("**Love Bazzite?** Help keep it going by [donating](%s)", "https://docs.bazzite.gg/donations/"),
 			l.Get("**Did an update break something?** Roll back, pin the previous release, or rebase to an older build — [view the guide](%s)", "https://docs.bazzite.gg/Installing_and_Managing_Software/Updates_Rollbacks_and_Rebasing/rolling_back_system_updates/"),
@@ -111,7 +111,7 @@ func GetRandomMessage(l *gotext.Locale) string {
 		}...)
 	}
 
-	if OSName == "Bluefin" {
+	if strings.Contains(OSName, "Bluefin") {
 		messages = append(messages, []string{
 			l.Get("Use `ujust rebase-helper` to roll back or switch channels — [See the docs](%s)", "https://docs.projectbluefin.io/administration/#switching-between-streams"),
 			l.Get("**Love Bluefin?** Help keep it going by [donating](%s)", "https://docs.projectbluefin.io/donations"),
