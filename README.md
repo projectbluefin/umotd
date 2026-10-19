@@ -12,17 +12,28 @@ Want to configure or contribute to uMotd ? Take a look at the [documentation](ht
 
 ## How to try
 
+### Homebrew
+
+uMotd is available on Mimolet's personal tap, mainly for testing purposes.
+You can download it on your system with:
+
+```sh
+brew tap themimolet/tap
+brew trust themimolet/tap
+brew install umotd
+```
+
+Homebrew allows you to update uMotd easily.
+
 ### Universal Blue system images
 
-uMotd is currently featured in Bluefin Dakota!
+uMotd is currently featured in Bluefin Dakota and Bluefin Utah!
 
 ### Download it from the releases page
 
 You can download the binaries from the [releases page](https://github.com/projectbluefin/umotd/releases).
 
 You can then rename it to `umotd` and place it in your usual `/bin` folder.
-
-> Note: You won't receive automatic updates, you will have to download Umotd at each new release.
 
 ### Compile from source
 
@@ -41,12 +52,12 @@ You'll then have the `umotd` binary in the current directory, which you can just
 
 ## Commands
 
-uMotd supports the following subcommands:
+uMotd supports the following arguments:
 
-```yml
-fb-iso:     Prints a specific message for Fedora-based isos
-help:       Shows the available commands
-version:    Displays the version of uMotd currently in use
+```sh
+fb-iso     # Prints a specific message for Fedora-based isos
+help       # Shows the available commands
+version    # Displays the version of uMotd currently in use
 ```
 
 Learn more in the [docs folder](https://github.com/projectbluefin/umotd/tree/main/docs) !
