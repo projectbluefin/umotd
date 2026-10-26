@@ -12,19 +12,6 @@ Want to configure or contribute to uMotd ? Take a look at the [documentation](ht
 
 ## How to try
 
-### Homebrew
-
-uMotd is available on Mimolet's personal tap, mainly for testing purposes.
-You can download it on your system with:
-
-```sh
-brew tap themimolet/tap
-brew trust themimolet/tap
-brew install umotd
-```
-
-Homebrew allows you to update uMotd easily.
-
 ### Universal Blue system images
 
 uMotd is currently featured in Bluefin Dakota and Bluefin Utah!
