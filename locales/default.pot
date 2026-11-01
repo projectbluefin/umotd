@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: umotd 0.4.0\n"
+"Project-Id-Version: umotd 0.4.1\n"
 "Report-Msgid-Bugs-To: themimolet@proton.me\n"
-"POT-Creation-Date: 2026-10-13 22:38+0200\n"
+"POT-Creation-Date: 2026-10-25 23:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -454,7 +454,7 @@ msgstr ""
 msgid "Usage:"
 msgstr ""
 
-#: main.go:34
+#: main.go:38
 #, go-format
 msgid ""
 "󰋼 The Live ISO is designed for installation and troubleshooting. `rpm-"
@@ -462,6 +462,6 @@ msgid ""
 "please restart your computer."
 msgstr ""
 
-#: main.go:37
+#: main.go:41
 msgid "Invalid command."
 msgstr ""
