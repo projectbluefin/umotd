@@ -1,5 +1,5 @@
 # Swedish translations for umotd package.
-# Copyright (C) 2026 The Project Bluefin Contributors
+# Copyright (C) 2026 Universal Blue
 # This file is distributed under the same license as the umotd package.
 # Daniel Nylander <po@danielnylander.se>, 2026.
 #

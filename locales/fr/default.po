@@ -1,14 +1,14 @@
-# French translation for uMotd
-# Copyright (C) 2026, The Project Bluefin Contributors
-# This file is distributed under the same license as the uMotd package.
+# French translations for umotd package.
+# Copyright (C) 2026 Universal Blue
+# This file is distributed under the same license as the umotd package.
 # Mimolet <themimolet@proton.me>, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: umotd 0.3.3\n"
+"Project-Id-Version: umotd 26.11.1\n"
 "Report-Msgid-Bugs-To: themimolet@proton.me\n"
-"POT-Creation-Date: 2026-10-13 22:38+0200\n"
-"PO-Revision-Date: 2026-10-13 22:22+0200\n"
+"POT-Creation-Date: 2026-10-25 23:42+0100\n"
+"PO-Revision-Date: 2026-11-02 15:32+0100\n"
 "Last-Translator: Mimolet <themimolet@proton.me>\n"
 "Language-Team: French <international-french@discourse.gnome.org>\n"
 "Language: fr\n"
@@ -245,7 +245,7 @@ msgstr ""
 msgid ""
 "Are you a developer? Try the `Developer Experience` — [Check it out](%s)"
 msgstr ""
-"Êtes-vous développeur ? Essayez-donc l'`Experience Développeur\"` ! —  [En "
+"Êtes-vous développeur ? Essayez-donc l'`Experience Développeur` ! —  [En "
 "savoir plus](%s) "
 
 #: internal/messages.go:71
@@ -528,7 +528,7 @@ msgid ""
 "macOS, and Windows."
 msgstr ""
 "**Le développement par conteneur est indépendant de votre système** — les "
-"devcontainers fonctionnent sur Linux, macOS et Windows.\""
+"devcontainers fonctionnent sur Linux, macOS et Windows."
 
 #: internal/messages.go:146
 #, go-format
@@ -595,7 +595,8 @@ msgstr ""
 msgid "Usage:"
 msgstr "Utilisation  :"
 
-#: main.go:34
+#: main.go:38
+#, go-format
 msgid ""
 "󰋼 The Live ISO is designed for installation and troubleshooting. `rpm-"
 "ostree` commands will not work here. If you've successfully installed %s, "
@@ -605,6 +606,6 @@ msgstr ""
 "`rpm-ostree` ne fonctionneront pas ici. Si vous venez de finir "
 "l'installation de %s, veuillez redémarrer votre ordinateur."
 
-#: main.go:37
+#: main.go:41
 msgid "Invalid command."
 msgstr "Commande invalide."

@@ -13,7 +13,7 @@ import (
 //go:embed all:locales
 var localesFS embed.FS
 
-const version = "0.4.1"
+const version = "26.11.1"
 
 func main() {
 

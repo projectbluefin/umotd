@@ -1,5 +1,5 @@
 package := "umotd"
-version := "0.4.1"
+version := "26.11.1"
 
 # This returns the current version of umotd. It is used in the build command to set the version of the binary.
 version:
@@ -9,20 +9,8 @@ version:
 check-deps:  check-deps-gettext
     @echo "All dependencies are installed ✅️"
 
-check-deps-go:
-    @which go >/dev/null 2>&1 || (echo "You don't have \`go\` installed :(" && exit 1)
-
 check-deps-gettext:
     @which gettext >/dev/null 2>&1 || (echo "You don't have \`gettext\` installed :(" && exit 1)
-
-# This builds the umotd binary for Linux on x86_64 and arm64 architectures.
-build: check-deps-go
-    @echo "Building {{package}}..."
-
-    GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o {{package}}_{{version}}_linux_amd64
-    GOOS=linux GOARCH=arm64 go build -ldflags="-s -w" -o {{package}}_{{version}}_linux_arm64
-
-    @echo "Built {{package}} v{{version}} for Linux on x86_64 and arm64"
 
 # This extracts the strings from umotd and makes a potfile with them
 extract-translations: check-deps-gettext
@@ -34,7 +22,7 @@ extract-translations: check-deps-gettext
             --from-code=UTF-8 \
             --keyword=Get \
             --msgid-bugs-address=themimolet@proton.me \
-            --copyright-holder="The Project Bluefin Contributors" \
+            --copyright-holder="Universal Blue" \
             --package-version="{{version}}" \
             --package-name="{{package}}" \
             --output=locales/default.pot \
