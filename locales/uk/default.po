@@ -241,11 +241,11 @@ msgstr ""
 #: internal/messages.go:71
 #, go-format
 msgid ""
-"**%s is not a distro**, this is a custom image built on  Fedora Atomic "
+"**%s is not a distro**, this is a custom image built on  Fedora Atomic "
 "Desktop technology — [View our mission](%s)"
 msgstr ""
 "**%s — не дистрибутив**, а спеціальний образ, створений на технологіях "
-"Fedora Atomic Desktop — [Наша місія](%s)"
+" Fedora Atomic Desktop — [Наша місія](%s)"
 
 #: internal/messages.go:76
 #, go-format
@@ -356,10 +356,10 @@ msgstr ""
 #: internal/messages.go:89
 #, go-format
 msgid ""
-"**%s is not a distro** — it’s a custom image built on  Fedora Atomic Desktop "
+"**%s is not a distro** — it’s a custom image built on  Fedora Atomic Desktop "
 "— [View our mission](%s)"
 msgstr ""
-"**%s — не дистрибутив**, а спеціальний образ на основі Fedora Atomic Desktop "
+"**%s — не дистрибутив**, а спеціальний образ на основі  Fedora Atomic Desktop "
 "— [Наша місія](%s)"
 
 #: internal/messages.go:90
