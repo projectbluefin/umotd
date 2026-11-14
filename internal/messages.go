@@ -24,7 +24,7 @@ func GetRandomMessage(l *gotext.Locale) string {
 		// It is hosted on Bluefin's website, but it has wallpapers from all Ublue desktops.
 		l.Get("**Love our wallpapers?** Explore the full [Universal Blue artwork collection](%s)", "https://docs.projectbluefin.io/artwork/"),
 		// Idea from bigredsponge
-		l.Get("Run `sl` makes a Steam locomotive appear in your terminal! Install it with `brew install sl`"),
+		l.Get("Run `sl` makes a Steam locomotive appear in your terminal! Try it with `brew install sl`"),
 		l.Get("**Are you a developer?** — Try `Developer Mode` for container tooling, virtualization, and IDEs — run `ujust devmode`"),
 		l.Get("**Want extra tools for your CoreOS server?** Check out [uCore](%s)", "https://projectucore.org/"),
 		l.Get("**Want an independent server built on freedesktop-sdk?** Check out [Bluefin Server](%s)", "https://projectbluefin.io/server/"),
@@ -41,7 +41,7 @@ func GetRandomMessage(l *gotext.Locale) string {
 
 	if Desktop == "GNOME" {
 		messages = append(messages, []string{
-			l.Get("**GNOME powers your desktop** — [Donate to GNOME](%s)", "https://donate.gnome.org"),
+			l.GetC("%s **GNOME powers your desktop** — [Donate to GNOME](%s)", "The first string is the symbol for GNOME, the second is the URL for the GNOME donation page", GetSymbol("gnome"), "https://donate.gnome.org"),
 			l.Get("Manage desktop extensions using the [Extension Manager](%s)", "appstream://com.mattjakeman.ExtensionManager"),
 			l.Get("**Control your device from your phone** with the `GSConnect` extension. Look for it in the [Extension Manager](%s)", "appstream://com.mattjakeman.ExtensionManager"),
 			l.Get("**Want to see your Bluetooth devices' battery levels?** Look for the `Bluetooth Battery Meter` extension in the [Extension Manager](%s)", "appstream://com.mattjakeman.ExtensionManager"),
@@ -51,7 +51,7 @@ func GetRandomMessage(l *gotext.Locale) string {
 
 	if Desktop == "KDE" {
 		messages = append(messages, []string{
-			l.Get("**KDE powers your desktop** — [Donate to KDE](%s)", "https://kde.org/donate"),
+			l.GetC("%s **KDE powers your desktop** — [Donate to KDE](%s)", "The first string is the symbol for KDE, the second is the URL for the KDE donation page", GetSymbol("kde"), "https://kde.org/donate"),
 			l.Get("KDE's mascot is a dragon named **Konqi**!"),
 			l.Get("**Control your device from your phone** with the `KDE Connect` app — [More info](%s)", "https://kdeconnect.kde.org/"),
 			l.Get("**Adjust Flatpak app permissions** in System Settings → Security and Privacy → App Permissions."),
@@ -68,7 +68,7 @@ func GetRandomMessage(l *gotext.Locale) string {
 			l.Get("Use `ujust rebase-helper` to roll back or switch channels — [See the docs](%s)", "https://docs.getaurora.dev/guides/release-streams/#switching-between-streams"),
 			l.Get("**Like dinosaurs?** Try `ujust toggle-dinosaurs` for a Mesozoic surprise!"),
 			l.Get("Are you a developer? Try the `Developer Experience` — [Check it out](%s)", "https://docs.getaurora.dev/dx/aurora-dx-intro"),
-			l.Get("**%s is not a distro**, this is a custom image built on  Fedora Atomic Desktop technology — [View our mission](%s)", OSName, "https://ublue.it/mission/"),
+			l.GetC("**%s is not a distro** — it’s a custom image built on %s Fedora Atomic Desktop — [View our mission](%s)", "First string is the OS name, second is the symbol for Fedora and the third is the URL for the mission statement", OSName, GetSymbol("fedora"), "https://ublue.it/mission/"),
 		}...)
 	}
 	if strings.Contains(OSName, "Bazzite") {
@@ -86,7 +86,7 @@ func GetRandomMessage(l *gotext.Locale) string {
 			l.Get("Use ProtonPlus to install custom Proton versions. We recommend Proton-GE for Steam games and Wine-GE for non-Steam use cases."),
 			l.Get("**Want to customize your desktop?** — [Follow our guide](%s)", "https://docs.bazzite.gg/General/Desktop_Environment_Tweaks/"),
 			l.Get("**Performance profiling is built-in** — use `sysprof`, `bpftrace`, or `perf` to analyze your system."),
-			l.Get("**%s is not a distro** — it’s a custom image built on  Fedora Atomic Desktop — [View our mission](%s)", OSName, "https://ublue.it/mission/"),
+			l.GetC("**%s is not a distro** — it’s a custom image built on %s Fedora Atomic Desktop — [View our mission](%s)", "First string is the OS name, second is the symbol for Fedora and the third is the URL for the mission statement", OSName, GetSymbol("fedora"), "https://ublue.it/mission/"),
 			l.Get("**Support indie game preservation and OSS developers** — [Join Hit Save!'s Patreon](%s)", "https://patreon.com/hitsave"),
 			l.Get("Use `ujust changelogs` to view a summary of the package changes since the last update."),
 		}...)
@@ -102,12 +102,12 @@ func GetRandomMessage(l *gotext.Locale) string {
 	if strings.Contains(ImgName, "bazzite-deck") {
 		messages = append(messages, []string{
 			l.Get("**Want to install Decky Loader?** Use `ujust setup-decky install`"),
-			l.Get("󰓓 The Steam game mode updater also updates Bazzite, Flatpak apps, and Distrobox containers. The changelog is from the Steam client."),
-			l.Get("**Install a game with Lutris?** Right-click on it and `Create Steam Shortcut` to play it in 󰓓 Steam game mode."),
+			l.GetC("%s The Steam game mode updater also updates Bazzite, Flatpak apps, and Distrobox containers. The changelog is from the Steam client.", "The string is the symbol for Steam", GetSymbol("steam")),
+			l.GetC("**Install a game with Lutris?** Right-click on it and `Create Steam Shortcut` to play it in %s Steam game mode.", "The string is the symbol for Steam", GetSymbol("steam")),
 			l.Get("**Missing game icons?** Use the `SteamGridDB` plugin for Decky Loader to add missing art — [More info](%s)", "https://github.com/SteamGridDB/decky-steamgriddb"),
-			l.Get("**Not sure which games are Linux-compatible?** The `ProtonDB Badges` plugin for Decky Loader adds community-powered compatibility badges to your entire 󰓓 Steam Library — [More info](%s)", "https://github.com/OMGDuke/protondb-decky"),
-			l.Get("**Want more security?** Use **Tailscale** and **OpenVPN** (built-in) with the `Tailscale Control` and `TunnelDeck` Decky Loader plugins in 󰓓 Steam game mode."),
-			l.Get("**Using a handheld with limited buttons?** 󰓓 Steam game mode supports touch gestures to slide out the menus, thanks to [ChimeraOS](%s)", "https://chimeraos.org/"),
+			l.GetC("**Not sure which games are Linux-compatible?** The `ProtonDB Badges` plugin for Decky Loader adds community-powered compatibility badges to your entire %s Steam Library — [More info](%s)", "The first string is the symbol for Steam, the second is the URL for ProtonDB", GetSymbol("steam"), "https://github.com/OMGDuke/protondb-decky"),
+			l.GetC("**Want more security?** Use **Tailscale** and **OpenVPN** (built-in) with the `Tailscale Control` and `TunnelDeck` Decky Loader plugins in %s Steam game mode.", "The string is the symbol for Steam", GetSymbol("steam")),
+			l.GetC("**Using a handheld with limited buttons?** %s Steam game mode supports touch gestures to slide out the menus, thanks to [ChimeraOS](%s)", "The first string is the symbol for Steam, the second is the URL for ChimeraOS", GetSymbol("steam"), "https://chimeraos.org/"),
 		}...)
 	}
 
@@ -142,7 +142,7 @@ func GetRandomMessage(l *gotext.Locale) string {
 
 	if HasSystemApp("code") || HasSystemApp("codium") {
 		messages = append(messages, []string{
-			l.Get("**Container development is OS-agnostic** — devcontainers work on Linux, macOS, and Windows."),
+			l.Get("**Container development is OS-agnostic** — devcontainers work on Linux, macOS, and Windows! [Learn more](%s)", "https://code.visualstudio.com/docs/devcontainers/containers"),
 			l.Get("**Develop with devcontainers** — use `devcontainer.json` to create isolated, reproducible environments! - Activate the workflow with `ujust devmode` and [get started today !](%s)", "https://code.visualstudio.com/docs/devcontainers/tutorial"),
 			l.Get("For multi-container setups, use `docker compose` instead of a single devcontainer."),
 		}...)
@@ -150,7 +150,7 @@ func GetRandomMessage(l *gotext.Locale) string {
 
 	if HasSystemApp("docker") || HasSystemApp("podman") {
 		messages = append(messages, []string{
-			l.Get("**%s is your gateway to 󱃾 Kubernetes** — run `kind create cluster` to [get started](%s)", OSName, "https://kind.sigs.k8s.io/"),
+			l.GetC("**%s is your gateway to %s Kubernetes** — run `kind create cluster` to [get started](%s)", "The first string is the OS name, the second is the symbol for Kubernetes and the third is the URL for the Kubernetes documentation", OSName, GetSymbol("kubernetes"), "https://kind.sigs.k8s.io/"),
 			l.Get("**%s is your gateway to Cloud Native** — find your flock at [landscape.cncf.io](%s)", OSName, "https://l.cncf.io"),
 			l.Get("%s separates the OS from your development environment — **embrace the cloud-native workflow**!", OSName),
 			l.Get("Use `ujust bbrew` and select `k8s-tools` to install Kubernetes tools like `kind` and `kubectl`."),
