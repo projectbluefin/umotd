@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: umotd 26.11.1\n"
 "Report-Msgid-Bugs-To: themimolet@proton.me\n"
-"POT-Creation-Date: 2026-11-14 14:30+0100\n"
-"PO-Revision-Date: 2026-11-02 15:32+0100\n"
+"POT-Creation-Date: 2026-11-14 14:31+0100\n"
+"PO-Revision-Date: 2026-11-14 15:07+0100\n"
 "Last-Translator: Mimolet <themimolet@proton.me>\n"
 "Language-Team: French <international-french@discourse.gnome.org>\n"
 "Language: fr\n"
@@ -76,13 +76,12 @@ msgstr ""
 "Universal Blue](%s)"
 
 #: internal/messages.go:27
-#, fuzzy
 msgid ""
 "Run `sl` makes a Steam locomotive appear in your terminal! Try it with `brew "
 "install sl`"
 msgstr ""
-"`sl` fait apparaître une locomotive à vapeur dans votre terminal! Installez-"
-"la avec `brew install sl`"
+"La commande `sl` fait apparaître une locomotive à vapeur dans votre "
+"terminal ! Essayez-la avec `brew install sl`"
 
 #: internal/messages.go:28
 msgid ""
@@ -139,14 +138,12 @@ msgstr ""
 "Github d'umotd](%s) "
 
 #: internal/messages.go:44
-#, fuzzy, go-format
+#, go-format
 msgctxt ""
 "The first string is the symbol for GNOME, the second is the URL for the "
 "GNOME donation page"
 msgid "%s **GNOME powers your desktop** — [Donate to GNOME](%s)"
-msgstr ""
-"**Votre bureau a été créé par la fondation GNOME !** — N'hésitez pas à leur "
-"[faire un don](%s)"
+msgstr "%s **GNOME fait vivre votre bureau** — [Faire un don à GNOME](%s)"
 
 #: internal/messages.go:45
 #, go-format
@@ -182,14 +179,12 @@ msgstr ""
 "Modifiez les avec [Flatseal](%s)"
 
 #: internal/messages.go:54
-#, fuzzy, go-format
+#, go-format
 msgctxt ""
 "The first string is the symbol for KDE, the second is the URL for the KDE "
 "donation page"
 msgid "%s **KDE powers your desktop** — [Donate to KDE](%s)"
-msgstr ""
-"**Votre bureau a été créé par la communauté KDE!** — N'hésitez pas à leur "
-"[faire un don](%s)"
+msgstr "%s **KDE fait vivre votre bureau** — [Faire un don à KDE](%s)"
 
 #: internal/messages.go:55
 msgid "KDE's mascot is a dragon named **Konqi**!"
@@ -256,7 +251,7 @@ msgstr ""
 "savoir plus](%s) "
 
 #: internal/messages.go:71 internal/messages.go:89
-#, fuzzy, go-format
+#, go-format
 msgctxt ""
 "First string is the OS name, second is the symbol for Fedora and the third "
 "is the URL for the mission statement"
@@ -265,7 +260,7 @@ msgid ""
 "Desktop — [View our mission](%s)"
 msgstr ""
 "**%s n'est pas une distribution** — c'est une image personnalisée créée à "
-"partir de la technologie  Fedora Atomic — [Voir notre mission](%s)"
+"partir de la technologie %s Fedora Atomic — [Voir notre mission](%s)"
 
 #: internal/messages.go:76
 #, go-format
@@ -414,25 +409,25 @@ msgstr ""
 "**Envie d'installer Decky Loader ?** Utilisz `ujust setup-decky install`"
 
 #: internal/messages.go:105
-#, fuzzy, go-format
+#, go-format
 msgctxt "The string is the symbol for Steam"
 msgid ""
 "%s The Steam game mode updater also updates Bazzite, Flatpak apps, and "
 "Distrobox containers. The changelog is from the Steam client."
 msgstr ""
-"󰓓 Le programme de mise à jour du Steam game mode met également à jour "
+"%s Le programme de mise à jour du Steam game mode met également à jour "
 "Bazzite, vos applications et vos conteneurs Distrobox. Les notes de mise à "
 "jour proviennent du client Steam."
 
 #: internal/messages.go:106
-#, fuzzy, go-format
+#, go-format
 msgctxt "The string is the symbol for Steam"
 msgid ""
 "**Install a game with Lutris?** Right-click on it and `Create Steam "
 "Shortcut` to play it in %s Steam game mode."
 msgstr ""
 "**Besoin d'installer un jeu avec Lutris ? Il suffit d'un clic droit sur "
-"votre jeu et cliquer sur `Create steam shortcut` pour le lancer depuis le 󰓓 "
+"votre jeu et cliquer sur `Create steam shortcut` pour le lancer depuis le %s "
 "Steam game mode."
 
 #: internal/messages.go:107
@@ -446,7 +441,7 @@ msgstr ""
 "plus](%s)"
 
 #: internal/messages.go:108
-#, fuzzy, go-format
+#, go-format
 msgctxt ""
 "The first string is the symbol for Steam, the second is the URL for ProtonDB"
 msgid ""
@@ -456,10 +451,10 @@ msgid ""
 msgstr ""
 "**Confus par la compatibilité de vos jeux avec Linux ?** Le plugin Decky "
 "Loader `ProtonDB Badges` rajoute des badges de compatibilité gérés par la "
-"communauté pour toute votre bibliothèque 󰓓 Steam — [En savoir plus](%s)"
+"communauté pour toute votre bibliothèque %s Steam — [En savoir plus](%s)"
 
 #: internal/messages.go:109
-#, fuzzy, go-format
+#, go-format
 msgctxt "The string is the symbol for Steam"
 msgid ""
 "**Want more security?** Use **Tailscale** and **OpenVPN** (built-in) with "
@@ -468,17 +463,17 @@ msgid ""
 msgstr ""
 "**Recherchez-vous plus de sécurité ?** Utilisez **Tailscale** et **OpenVPN** "
 "(intégrés) grâce aux plugins Decky Loader `Tailscale Control` et "
-"`TunnelDeck` depuis le 󰓓 Steam game mode."
+"`TunnelDeck` depuis le %s Steam game mode."
 
 #: internal/messages.go:110
-#, fuzzy, go-format
+#, go-format
 msgctxt ""
 "The first string is the symbol for Steam, the second is the URL for ChimeraOS"
 msgid ""
 "**Using a handheld with limited buttons?** %s Steam game mode supports touch "
 "gestures to slide out the menus, thanks to [ChimeraOS](%s)"
 msgstr ""
-"**Utilisez-vous une console portable avec un nombre de boutons limité?** 󰓓 "
+"**Utilisez-vous une console portable avec un nombre de boutons limité?** %s "
 "Steam game mode prend en charge les gestes tactiles pour faire glisser les "
 "menus, grâce à [ChimeraOS](%s)"
 
@@ -534,13 +529,13 @@ msgstr ""
 "et vous aide à découvrir de nouveaux outils ! "
 
 #: internal/messages.go:145
-#, fuzzy, go-format
+#, go-format
 msgid ""
 "**Container development is OS-agnostic** — devcontainers work on Linux, "
 "macOS, and Windows! [Learn more](%s)"
 msgstr ""
 "**Le développement par conteneur est indépendant de votre système** — les "
-"devcontainers fonctionnent sur Linux, macOS et Windows."
+"devcontainers fonctionnent sur Linux, macOS et Windows. [En savoir plus](%s)"
 
 #: internal/messages.go:146
 #, go-format
@@ -562,7 +557,7 @@ msgstr ""
 "place d'un seul devcontainer."
 
 #: internal/messages.go:153
-#, fuzzy, go-format
+#, go-format
 msgctxt ""
 "The first string is the OS name, the second is the symbol for Kubernetes and "
 "the third is the URL for the Kubernetes documentation"
@@ -570,7 +565,7 @@ msgid ""
 "**%s is your gateway to %s Kubernetes** — run `kind create cluster` to [get "
 "started](%s)"
 msgstr ""
-"**%s est votre porte d'entrée à 󱃾 Kubernetes** — entrez `kind create "
+"**%s est votre porte d'entrée à %s Kubernetes** — entrez `kind create "
 "cluster` pour [commencer](%s)"
 
 #: internal/messages.go:154
@@ -611,14 +606,14 @@ msgid "Usage:"
 msgstr "Utilisation  :"
 
 #: main.go:38
-#, fuzzy, go-format
+#, go-format
 msgctxt "The first string is the symbol for info, the second is the OS name"
 msgid ""
-" %s The Live ISO is designed for installation and troubleshooting. `rpm-"
+"%s The Live ISO is designed for installation and troubleshooting. `rpm-"
 "ostree` commands will not work here. If you've successfully installed %s, "
 "please restart your computer."
 msgstr ""
-"󰋼 Le Live ISO est conçu pour l'installation et le débogage. Les commandes "
+"%s Le Live ISO est conçu pour l'installation et le débogage. Les commandes "
 "`rpm-ostree` ne fonctionneront pas ici. Si vous venez de finir "
 "l'installation de %s, veuillez redémarrer votre ordinateur."
 
