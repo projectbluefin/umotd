@@ -1,5 +1,5 @@
 package := "umotd"
-version := "26.11.1"
+version := "26.11.2"
 
 # This returns the current version of umotd. It is used in the build command to set the version of the binary.
 version:
