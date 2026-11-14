@@ -35,7 +35,7 @@ func main() {
 			return
 		// Prints a special message for Fedora-based isos
 		case "fb-iso":
-			fmt.Print(l.GetC(" %s The Live ISO is designed for installation and troubleshooting. `rpm-ostree` commands will not work here. If you've successfully installed %s, please restart your computer.", "The first string is the symbol for info, the second is the OS name", i.GetSymbol("info"), i.OSName))
+			fmt.Print(l.GetC("%s The Live ISO is designed for installation and troubleshooting. `rpm-ostree` commands will not work here. If you've successfully installed %s, please restart your computer.", "The first string is the symbol for info, the second is the OS name", i.GetSymbol("info"), i.OSName))
 			return
 		default:
 			fmt.Fprintln(os.Stderr, l.Get("Invalid command."))
