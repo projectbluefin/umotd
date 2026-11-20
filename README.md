@@ -12,9 +12,9 @@ Want to configure or contribute to uMotd ? Take a look at the [documentation](ht
 
 ## How to try
 
-### Universal Blue system images
+<!-- ### Universal Blue system images
 
-uMotd is currently featured in Bluefin Dakota and Bluefin Utah!
+uMotd is currently featured in Bluefin Dakota and Bluefin Utah! -->
 
 ### Download it from the releases page
 
@@ -51,6 +51,6 @@ Learn more in the [docs folder](https://github.com/projectbluefin/umotd/tree/mai
 
 ## AI usage
 
-This project had mild AI involvement mainly for auto-completion and AI is still kind of used for code checking, but the code is still written by the hands of an idiot (me :P).
+This project had mild AI involvement mainly for auto-completion and code checking, but most of the code is still thought of and written by the hands of an idiot (me :P).
 
 [![REAL AI Rating - Level 3 "Moderate AI"](docs/ai-rating.png)](https://www.realgoodai.org/real-rating)
