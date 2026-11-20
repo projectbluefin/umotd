@@ -22,6 +22,8 @@ You can download the binaries from the [releases page](https://github.com/projec
 
 You can then rename it to `umotd` and place it in your usual `/bin` folder.
 
+> Note: You won't receive automatic updates, you will have to download uWelcome at each new release.
+
 ### Compile from source
 
 You'll need to have [`go`](https://repology.org/project/go/versions) installed on your system to compile uMotd from source.
@@ -52,5 +54,6 @@ Learn more in the [docs folder](https://github.com/projectbluefin/umotd/tree/mai
 ## AI usage
 
 This project had mild AI involvement mainly for auto-completion and code checking, but most of the code is still thought of and written by the hands of an idiot (me :P).
+The program is always tested before release, no worries. (I have standards >:3)
 
 [![REAL AI Rating - Level 3 "Moderate AI"](docs/ai-rating.png)](https://www.realgoodai.org/real-rating)
